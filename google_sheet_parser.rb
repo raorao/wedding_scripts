@@ -111,7 +111,8 @@ STRATEGIES = [
 
 puts "fetching data"
 
-spreadsheet_id = ARGV[0]
+spreadsheet_id = ENV['SHEET_ID']
+
 
 headers, *rows = GoogleSheetLoader.fetch(
   spreadsheet_id: spreadsheet_id,
